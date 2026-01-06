@@ -1,0 +1,11 @@
+WHAT IS THE MAINTANENCE WORK IN DOCKER?
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+All the metadata of docker [images, host, cont details etc etc] will be stored at "var/lib/docker". 
+So the maintenance work is we need to make sure that the "var/lib/docker" repo has enough capacity.
+
+Actions or tasks:
+1. Ensure that all the images are having ref to ID. if the imaage is not having proper tag or repo location the we need to delete that image.
+2. Ensure images are dandling i.e. images should have cache and proper ref.
+3. when we create docker run, new image is downloaded. so we need to make sure the older images are deleted
+4. delete exited containers
+5. delete unused volumes
